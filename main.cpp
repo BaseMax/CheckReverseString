@@ -9,6 +9,7 @@
 *
 **/
 #include <iostream>
+#include <cstring>
 // #include <algorithm>
 using namespace std;
 
@@ -25,6 +26,31 @@ void flip2(string& input) {
 	int length = input.length(); 
 	for(int index = 0; index < length / 2; index++)
 		swap(input[index], input[length - index - 1]); 
+}
+
+char* flip3(char *input) {
+	size_t length = strlen(input);
+	char* temp = (char*) malloc(sizeof(char) * length + 1);
+	int counter = 0;
+	for(int index = length - 1; index >= 0; index--, counter++)
+		temp[counter] = input[index];
+	temp[counter + 1] = '\0';
+	return temp;
+}
+
+char* flip4(const char *input) {
+	size_t length = strlen(input);
+	char* temp = (char*) malloc(sizeof(char) * (length + 1));
+	if(temp) {
+		size_t counter = 0;
+		while(length > 0) {
+			length--;
+			temp[counter] = input[length]; 
+			counter++;
+		}
+		temp[counter] = '\0';
+	}
+	return temp;
 }
 
 void check(string input) {
