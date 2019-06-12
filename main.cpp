@@ -1,10 +1,15 @@
 // https://github.com/BaseMax/CheckReverseString
 #include <iostream>
-#include <algorithm>
+// #include <algorithm>
 using namespace std;
 
+// reverse
+// void flip(string& str) 
 string flip(string input) {
-	reverse(input.begin(), input.end());
+	// reverse(input.begin(), input.end());
+	int length = input.length(); 
+	for(int index = 0; index < length / 2; index++)
+		swap(input[index], input[length - index - 1]); 
 	return input;
 }
 
