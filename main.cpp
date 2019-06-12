@@ -53,6 +53,17 @@ char* flip4(const char *input) {
 	return temp;
 }
 
+char* flip5(char *input) {
+	size_t length = strlen(input);
+	size_t index = 0;
+	while (length > index) {
+		char tmp = input[--length];
+		input[len] = input[index];
+		input[index++] = tmp;
+	}
+	return input;
+}
+
 void check(string input) {
 	const unsigned int size=input.length();
 	const unsigned int middle=size / 2;
