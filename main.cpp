@@ -64,6 +64,27 @@ char* flip5(char *input) {
 	return input;
 }
 
+void flip6(string input) {
+	for(int index=input.length()-1; index>=0; index--) 
+		cout << input[index];  
+}
+
+char* flip7(char const* input) {
+	int length = strlen(input); 
+	char *temp = new char[length+1]; 
+	strcpy(temp, input);
+	for(int index=0, counter=length-1; index<counter; index++,counter--) 
+		swap(temp[index], temp[counter]);
+	return temp;
+}
+
+void flip8(string &input)
+{
+	int length = input.length();
+	for(int index = 0; index < length/2; index++)
+		std::swap(input[index], input[length-index-1]);
+}
+
 void check(string input) {
 	const unsigned int size=input.length();
 	const unsigned int middle=size / 2;
