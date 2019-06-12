@@ -13,13 +13,18 @@
 using namespace std;
 
 // reverse
-// void flip(string& str) 
 string flip(string input) {
 	// reverse(input.begin(), input.end());
 	int length = input.length(); 
 	for(int index = 0; index < length / 2; index++)
 		swap(input[index], input[length - index - 1]); 
 	return input;
+}
+
+void flip2(string& input) {
+	int length = input.length(); 
+	for(int index = 0; index < length / 2; index++)
+		swap(input[index], input[length - index - 1]); 
 }
 
 void check(string input) {
@@ -40,7 +45,9 @@ void check(string input) {
 			break;
 		}
 	}
-	cout << flip(input) << " (" << ((result == true) ? "TRUE" : "FALSE") << ")\n";
+	// cout << flip(input) << " (" << ((result == true) ? "TRUE" : "FALSE") << ")\n";
+	flip2(input);
+	cout << input << " (" << ((result == true) ? "TRUE" : "FALSE") << ")\n";
 }
 
 int main(int argc, char const *argv[]) {
