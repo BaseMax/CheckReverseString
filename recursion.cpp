@@ -7,14 +7,15 @@ void recursion() {
 	if(character != '\n') {
 		recursion();
 	}
+	// else { /* Done! */ }
 	cout << character; // printf("...", character);
 }
 
 int main() {
 	while(true) {
-		cout << "> ";
+		cout << "> "; // printf("> ");
 		recursion();
-		cout << "\n";
+		cout << "\n"; // printf("\n");
 	}
 	return 0;
 }
