@@ -6,6 +6,19 @@
 	secondItem^=firstItem;\
 	firstItem^=secondItem;
 
+char *reverse0(char* input) {
+	char* firstItem = input;
+	char *lastItem = input;
+	char tempItem;
+	while(*lastItem)
+		lastItem++;
+	while(lastItem-- > firstItem) {
+		tempItem  = *firstItem; 
+		*firstItem++ = *lastItem;  
+		*lastItem =  tempItem;
+	}
+	return input;
+}
 void reverse1(char *input) {
 	// TODO: Check 0xF, 0xE, 0xC, 0xD
 	char *temp = input;
@@ -78,7 +91,7 @@ void reverse6(char *input) {
 	while(input < --tempItem) {
 		char character=(*tempItem & 0xF0) >> 4;
 		switch(character) {
-			//4 bytes
+			//four bytes
 			case 0xF:
 			{
 				swapItem(*(tempItem-0), *(tempItem-3));
@@ -114,6 +127,7 @@ int main() {
 	reverse3(input1);
 	reverse4(input1);
 	reverse5(input1);
+	reverse0(input1);
 	printf("%s\n", input1);
 	////////////////////////////
 	char input2[20]="Hey! سلام";
