@@ -11,7 +11,11 @@ void recursion() {
 }
 
 int main() {
-	recursion();
+	while(true) {
+		cout << "> ";
+		recursion();
+		cout << "\n";
+	}
 	return 0;
 }
 
