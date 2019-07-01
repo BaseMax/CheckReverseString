@@ -78,7 +78,7 @@ void reverse6(char *input) {
 	while(input < --tempItem) {
 		char character=(*tempItem & 0xF0) >> 4;
 		switch(character) {
-			//four bytes
+			//4 bytes
 			case 0xF:
 			{
 				swapItem(*(tempItem-0), *(tempItem-3));
