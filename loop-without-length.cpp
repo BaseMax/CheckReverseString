@@ -1,3 +1,4 @@
+// https://github.com/BaseMax/CheckReverseString
 #include <stdio.h>
 
 #define swapItem(firstItem,secondItem) \
@@ -102,4 +103,23 @@ void reverse6(char *input) {
 			break;
 		}
 	}
+}
+
+int main() {
+	// char input1[20]="Hey! سلام";
+	char input1[20]="Hey!";
+	printf("%s\n", input1);
+	reverse1(input1);
+	reverse2(input1);
+	reverse3(input1);
+	reverse4(input1);
+	reverse5(input1);
+	printf("%s\n", input1);
+	////////////////////////////
+	char input2[20]="Hey! سلام";
+	printf("%s\n", input2);
+	reverse6(input2);
+	printf("%s\n", input2);
+	////////////////////////////
+	return 0;
 }
